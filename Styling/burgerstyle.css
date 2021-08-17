@@ -1,0 +1,60 @@
+* {
+    margin: 0 auto;
+}
+.container {
+    background-color: silver;
+}
+
+.nav {
+    background-color: green;
+}
+
+.nav p {
+    margin-left: 10em;
+    margin-top: 2.5em;
+    display: inline-block;
+    font-size: x-large;
+}
+
+#content {
+    margin: 1em;
+    height: 1920px;
+    vertical-align: top;
+}
+
+#sidead {
+    background-color: teal;
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    font-size:x-large;
+}
+
+#meat {
+    background-color: red;
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 30px;
+    width: 88%;
+    height: 400px;
+}
+
+.news{
+    display: inline-block;
+    background-color: orange;
+    margin-left: 70px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 200px;
+    width: 28.5%;
+}
+
+#purple {
+    background-color: purple;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+    
+    font-size: x-large;
+}
