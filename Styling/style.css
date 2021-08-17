@@ -1,0 +1,25 @@
+* {
+    margin: auto;
+    padding: 15px;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+}
+
+h1 span {
+    color: teal;
+}
+
+h2 {
+    background-color: purple;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    background-color: lightblue;
+    color: blue;
+    text-align: right;
+}
