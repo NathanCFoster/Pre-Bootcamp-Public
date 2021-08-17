@@ -1,0 +1,32 @@
+* {
+    margin: .5em;
+    padding: 30px;
+}
+
+#search {
+    border-color: teal;
+    border-radius: 50px;
+    color: teal;
+    width: 20%;
+}
+
+#plus {
+    background-color: teal;
+    color: black;
+    border-radius: 75px;
+    border-width: 0px;
+    height: 2em;
+    width: 2em;
+    font-size: 40px;
+    line-height: .10em;
+    text-align: center;
+    margin: auto;
+}
+
+#create {
+    border-color: black;
+    border-width: 2.5px;
+    background-color: blue;
+    box-shadow: 5px 5px black;
+    color: white;
+}
