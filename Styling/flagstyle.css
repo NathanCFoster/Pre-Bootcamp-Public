@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+}
+
+#flag {
+    height: 600px;
+    width: 500px;
+    position: absolute;
+
+}
+#white {
+    border-color: transparent transparent transparent white;
+    border-width: 150px 200px;
+    border-style: solid;
+    position: absolute;
+
+}
+
+#red {
+    width: 550px;
+    height: 150px;
+    background-color: red;
+    border-top: 100px;
+}
+
+#blue {
+    width: 550px;
+    height: 150px;
+    background-color: blue;
+}
+
+#star {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -35px;
+}
