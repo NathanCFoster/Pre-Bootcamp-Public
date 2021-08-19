@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        * {
+            margin: 7.5px;
+        }
+
+        html {
+            margin: 0;
+        }
+
+        body {
+            font-size: 20px;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            background: #2193b0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            margin: 0;
+        }
+
+        .nav-title {
+            color: white;
+            margin-left: 2.5%;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-self: center;
+            width: 80%;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .btn {
+            background-color: teal;
+            box-shadow: 2.5px 2.5px black;
+            color: white;
+            border-color: black;
+            border-radius: 15%;
+            font-size: 1em;
+        }
+
+        .nav-links li {
+            margin-left: 7.5%;
+        }
+
+        h2 {
+            margin-left: 25px;
+        }
+
+        article {
+            display: flex;
+            margin: 5%;
+            align-items: center;
+        }
+
+        article p {
+            margin-left: 30px;
+        }
+
+        #userCard {
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            width: 80%;
+            background: #2193b0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border: 6px solid darkslategray;
+            border-radius: 30px;
+        }
+
+        #pfp {
+            height: 100px;
+            width: 100px;
+            margin: 50px;
+            margin-bottom: 0;
+        }
+
+        #map {
+            height: 40px;
+        }
+
+        #gear {
+            height: 20px;
+        }
+
+        #edit {
+            display: flex;
+            justify-content: flex-start;
+            margin: 50px 100px 20px;
+            font-size: 20px;
+        }
+
+        #edit p {
+            color: rgb(8, 83, 148);
+            margin: 0;
+            margin-left: .75em;
+            margin-top: 10px;
+        }
+
+        #container-2 {
+            background-color: grey;
+            border-radius: 0 0 24.5px 24.5px;
+            margin: 0;
+            height: 80%;
+        }
+
+        #container-2 p:nth-child(odd) {
+            margin-left: 60px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #sidebar {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+
+        #requests {
+            background-color: grey;
+            margin: 0;
+            border-radius: 30px;
+            border: 6px solid darkslategray;
+        }
+
+        #connections {
+            background-color: grey;
+            margin: 40px 0 0 0;
+            border-radius: 30px;
+            border: 6px solid darkslategray;
+            text-align: center;
+        }
+
+        #education {
+            background-color: grey;
+            border-radius: 30px;
+            border: 6px solid darkslategray;
+            text-align: center;
+            width: 80%;
+        }
+
+        #education a {
+            color: black;
+        }
+
+        .section-title {
+            background: #2193b0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            border-radius: 25px 25px 0 0;
+            border-bottom: 3px solid darkslategray;
+        }
+
+        .circle {
+            border-radius: 50%;
+            border: 1.25rem solid lightpink;
+            background-color: lightpink;
+            color: black;
+            height: 50px;
+            width: 50px;
+            align-self: center;
+            line-height: 150%;
+        }
+
+        .scroller {
+            overflow-y: scroll;
+            width: 400px;
+            margin: 0;
+            flex-direction: column;
+            height: 300px;
+        }
+        
+        .profiles {
+            height: 100px;
+            font-size: x-large;
+            margin: 0;
+        }
+
+        .profiles p {
+            margin: 0;
+            width: 30%;
+        }
+
+        .profiles img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .linkDate {
+            color: darkslategrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+            <li><button class="btn">Sign Out</button></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="content">
+            <div id="userCard">
+                <img src="cartoonpfp.png" alt="pfp" id="pfp">
+                <div id="container-2">
+                    <h2>Nathan Foster</h2>
+                    <article>
+                        <a
+                            href="https://www.google.com/maps/place/Colorado+Springs,+CO/@38.8758676,-104.8987857,11z/data=!3m1!4b1!4m5!3m4!1s0x8713412ea1e6d22b:0x418eeb92f5e86b13!8m2!3d38.8338816!4d-104.8213634"><img
+                                src="pngmap.png" alt="pin" id="map"></a>
+                        <p>Colorado Springs</p>
+                    </article>
+                    <p>Developer | Engineer | Problem Solver <br> Master of THE WORLD WIDE WEB!</p>
+                    <a href="#" id="edit"><img src="gear.png" alt="gear" id="gear">
+                        <p>edit profile</p>
+                    </a>
+                </div>
+            </div>
+            <div id="education">
+                <h4 class="section-title">Education</h4>
+                <article class="border-grey">
+                    <a href="#">Coding Dojo - Full Stack Bootcamp <br> <span class="linkDate">2019 - Mar 2020</span></a>
+                    <p>Trible black belt in Python, MERN, and C#</p>
+                </article>
+            </div>
+        </div>
+        <div id="sidebar">
+            <div id="requests">
+                <h4 class="section-title"><span class="circle">2</span>Connection Requests</h4>
+                <div class="border-grey">
+                    <article class="profiles">
+                        <img src="images/todd-s.jpg" alt="pfp">
+                        <p>Todd S</p>
+                        <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                        <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                    </article>
+                    <article class="profiles">
+                        <img src="images/phil-s.jpg" alt="pfp">
+                        <p>Phil s</p>
+                        <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                        <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                    </article>
+                </div>
+            </div>
+            <div id="connections">
+                <h4 class="section-title"><span class="circle">99+</span>Your Connections</h4>
+                <div>
+                    <article class="scroller">
+                        <article class="profiles">
+                            <img src="images/jane-m.jpg" alt="pfp">
+                            <p>Jane M</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="images/arry-s.jpg" alt="pfp">
+                            <p>Arry S</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="images/anne-s.jpg" alt="pfp">
+                            <p>Anne S</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="images/alayne-s.jpg" alt="pfp">
+                            <p>Alayne S</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="icons/user-circle.png" alt="pfp">
+                            <p>Anon</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="icons/user-circle.png" alt="pfp">
+                            <p>Anon</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="icons/user-circle.png" alt="pfp">
+                            <p>Anon</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="icons/user-circle.png" alt="pfp">
+                            <p>Anon</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="icons/user-circle.png" alt="pfp">
+                            <p>Anon</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                        <article class="profiles">
+                            <img src="icons/user-circle.png" alt="pfp">
+                            <p>Anon</p>
+                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
+                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        </article>
+                    </article>
+                    <a href="#" id="view profiles">View More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
