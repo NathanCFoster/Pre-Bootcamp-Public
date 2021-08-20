@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojonary</title>
+    <link rel="stylesheet" href="../Styling/dojo.css">
+    <style>
+        #search {
+            width: 30%;
+            margin: 10px;
+            border: 3px solid grey;
+        }
+
+        #login {
+            margin: 10px;
+        }
+
+        #like {
+            border-color: teal;
+            border-radius: 50px;
+            color: black;
+        }
+
+        .section-title {
+            height: 2.5em;
+        }
+
+        .green {
+            background-color: lightgreen;
+            width: 80%;
+        }
+
+        .defined {
+            height: 110%;
+        }
+
+        #addDefinition {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+
+        a:visited {
+            color: blue;
+        }
+    </style>
+    <script>
+        function logout(element) {
+            element.innerText = "Logout";
+        }
+
+        function remove(element) {
+            element.remove();
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <h3 class="nav-title">Dojonary</h3>
+        <input type="text" placeholder="Search" id="search">
+        <button type="submit" id="login" class="btn" onclick="logout(this)">Login</button>
+    </div>
+    <div id="container" class="row">
+        <div id="content" class="col-3">
+            <div class="section spaced">
+                <h3 class="section-title">ninja</h3>
+                <article class="row">
+                    <p class="col spaced"><em class="spaced">noun</em><br><span class="spaced">Plural: <em class="spaced">ninjas</em></span><br><button id="like" class="spaced" onclick="alert('ninja was liked')">13 likes</button></p>
+                    <p class="col-3">A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu.</a></p>
+                </article>
+            </div>
+            <div class="section spaced">
+                <h3 class="section-title">ninja</h3>
+                <article class="row">
+                    <p class="col spaced"><em class="spaced">noun</em><br><span class="spaced">Plural: <em class="spaced">ninjas</em></span><br><button id="like" class="spaced">13 likes</button></p>
+                    <p class="col-3">A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                </article>
+            </div>
+        </div>
+        <div id="sidebar" class="col">
+            <div id="addDefinition" class="section">
+                <h3 class="spaced defined">Dojonary is defined by YOU</h3>
+                <button class="btn green spaced" onclick="remove(this)">Add Definition</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
