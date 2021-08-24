@@ -11,15 +11,10 @@
             margin: 7.5px;
         }
 
-        html {
-            margin: 0;
-        }
-
         body {
             font-size: 20px;
             font-size: 30px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 0;
         }
 
         .nav {
@@ -221,10 +216,11 @@
             height: 100px;
             font-size: x-large;
             margin: 0;
+            width: 100%;
         }
 
         .profiles p {
-            margin: 0;
+            margin: 10px;
             width: 30%;
         }
 
@@ -236,7 +232,10 @@
         .linkDate {
             color: darkslategrey;
         }
+
+        
     </style>
+    <script src="profilejs.js"></script>
 </head>
 
 <body>
@@ -255,7 +254,7 @@
             <div id="userCard">
                 <img src="cartoonpfp.png" alt="pfp" id="pfp">
                 <div id="container-2">
-                    <h2>Nathan Foster</h2>
+                    <h2 id="nameChange">Nathan Foster</h2>
                     <article>
                         <a
                             href="https://www.google.com/maps/place/Colorado+Springs,+CO/@38.8758676,-104.8987857,11z/data=!3m1!4b1!4m5!3m4!1s0x8713412ea1e6d22b:0x418eeb92f5e86b13!8m2!3d38.8338816!4d-104.8213634"><img
@@ -263,8 +262,8 @@
                         <p>Colorado Springs</p>
                     </article>
                     <p>Developer | Engineer | Problem Solver <br> Master of THE WORLD WIDE WEB!</p>
-                    <a href="#" id="edit"><img src="gear.png" alt="gear" id="gear">
-                        <p>edit profile</p>
+                    <a href="#" id="edit"><img src="gear.png" alt="gear" id="gear" onclick="changeName()">
+                        <p onclick="changeName()">edit profile</p>
                     </a>
                 </div>
             </div>
@@ -278,85 +277,75 @@
         </div>
         <div id="sidebar">
             <div id="requests">
-                <h4 class="section-title"><span class="circle">2</span>Connection Requests</h4>
+                <h4 class="section-title"><span class="circle" id="connectionRequests">2</span>Connection Requests</h4>
                 <div class="border-grey">
-                    <article class="profiles">
+                    <article class="profiles" id="profiles0">
                         <img src="images/todd-s.jpg" alt="pfp">
                         <p>Todd S</p>
-                        <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                        <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        <a href="#" onclick="addConnection(this)" id="0"><img src="icons/accept-circle.png" alt="accept"></a>
+                        <a href="#" onclick="deleteConnection(this)" id="0"><img src="icons/close-circle.png" alt="dont accept"></a>
                     </article>
-                    <article class="profiles">
+                    <article class="profiles" id="profiles-1">
                         <img src="images/phil-s.jpg" alt="pfp">
                         <p>Phil s</p>
-                        <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                        <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                        <a href="#" id="-1" onclick="addConnection(this)"><img src="icons/accept-circle.png" alt="accept"></a>
+                        <a href="#" id="-1" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                     </article>
                 </div>
             </div>
             <div id="connections">
-                <h4 class="section-title"><span class="circle">99+</span>Your Connections</h4>
+                <h4 class="section-title"><span class="circle" id="connectionCounter">10</span>Your Connections</h4>
                 <div>
-                    <article class="scroller">
-                        <article class="profiles">
+                    <article class="scroller" id="currentConnections">
+                        <article class="profiles spaced" id="profiles1">
                             <img src="images/jane-m.jpg" alt="pfp">
                             <p>Jane M</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="1" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles2">
                             <img src="images/arry-s.jpg" alt="pfp">
                             <p>Arry S</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="2" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles3">
                             <img src="images/anne-s.jpg" alt="pfp">
                             <p>Anne S</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="3" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles4">
                             <img src="images/alayne-s.jpg" alt="pfp">
                             <p>Alayne S</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="4" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles5">
                             <img src="icons/user-circle.png" alt="pfp">
                             <p>Anon</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="5" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles6">
                             <img src="icons/user-circle.png" alt="pfp">
                             <p>Anon</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="6" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles7" >
                             <img src="icons/user-circle.png" alt="pfp">
                             <p>Anon</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="7" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles8">
                             <img src="icons/user-circle.png" alt="pfp">
                             <p>Anon</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="8" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles9">
                             <img src="icons/user-circle.png" alt="pfp">
                             <p>Anon</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="9" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
-                        <article class="profiles">
+                        <article class="profiles" id="profiles10">
                             <img src="icons/user-circle.png" alt="pfp">
                             <p>Anon</p>
-                            <a href="#"><img src="icons/accept-circle.png" alt="accept"></a>
-                            <a href="#"><img src="icons/close-circle.png" alt="dont accept"></a>
+                            <a href="#" id="10" onclick="deleteConnection(this)"><img src="icons/close-circle.png" alt="dont accept"></a>
                         </article>
                     </article>
                     <a href="#" id="view profiles">View More</a>
