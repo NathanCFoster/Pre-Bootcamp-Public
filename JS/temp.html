@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button get the HTML content of the div element with id1.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id='id1'>This is going to change</div>
+
+    <script>
+        function myFunction() {
+            var x = "<div id=\"id2\">This is the text generated from JS</div>";
+            var y = document.getElementById("id1");
+            y.innerHTML = x;
+        }
+    </script>
+
+</body>
+
+</html>
