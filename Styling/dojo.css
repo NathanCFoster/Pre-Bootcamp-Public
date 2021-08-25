@@ -6,15 +6,27 @@ body {
     margin: 10px;
 }
 
+.xspaced {
+    padding: 10px;
+    margin: 10px;
+}
+
 .btn {
     border-color: teal;
     border-radius: 50px;
     color: black;
     width: 20%;
+    font-size: 100%;
 }
 
 .row {
     display: flex;
+    flex-direction: column;
+}
+
+.row-under {
+    display: flex;
+    flex-direction: row;
 }
 
 .col {
@@ -24,13 +36,11 @@ body {
 
 .col-2 {
     flex: 2;
-    padding: 20px;
     margin: 10px;
 }
 
 .col-3 {
     flex: 3;
-    padding: 20px;
     margin: 10px;
 }
 
@@ -58,6 +68,7 @@ body {
     justify-content: space-evenly;
     align-self:center;
     width: 80%;
+    color: black;
 }
 
 .section-title {
@@ -81,4 +92,25 @@ body {
     background-color: grey;
     border-radius: 30px;
     border: 6px solid darkslategray;
+}
+
+.centered {
+    justify-items: center;
+    align-items: center;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.fill-w {
+    width: 100%;
+}
+
+.fill-h {
+    height: 100%;
+}
+
+.circle {
+    border-radius: 50%;
 }

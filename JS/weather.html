@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Weather</title>
+    <link rel="stylesheet" href="../Styling/dojo.css">
+    <link rel="stylesheet" href="weathercustom.css">
+    <script src="ninjasays.js"></script>
+</head>
+
+<body>
+    <div class="nav xspaced">
+        <h2 class="col-2 nav-title">DojoWeather</h3>
+            <a href="#" onclick="alert('why you clicking me?')" class="nav-links col">Burbank</a>
+            <a href="#" onclick="alert('why you clicking me?')" class="nav-links col">Chicago</a>
+            <a href="#" onclick="alert('why you clicking me?')" class="nav-links col">Dallas</a>
+    </div>
+    <div class="row centered">
+        <div class="row-under spaced" id="currentDisplay">
+            <h3 class="col-3 san-jose">San Jose</h3>
+            <p class="col-2 centered-text">show temperature in
+                <select id="temperature" onchange="changeTemp(this)">
+                    <option value="c">°C</option>
+                    <option value="f">°F</option>
+                </select>
+            </p>
+        </div>
+        <div class="row-under fill-w">
+            <div class="col spaced section">
+                <h4 class="section-title">Today</h4>
+                <div class="centered row">
+                    <img src="images/assets/some_rain.png" class="circle spaced">
+                    <p>some rain</p>
+                    <div class="row-under">
+                        <p class="high xspaced"><span id="degree">24</span>°</p>
+                        <p class="low xspaced"><span id="degree">18</span>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col spaced section">
+                <h4 class="section-title">Tomorrow</h4>
+                <div class="centered row">
+                    <img src="images/assets/some_sun.png" class="circle spaced">
+                    <p>some sun</p>
+                    <div class="row-under">
+                        <p class="high xspaced"><span id="degree">35</span>°</p>
+                        <p class="low xspaced"><span id="degree">25</span>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col spaced section">
+                <h4 class="section-title">Thursday</h4>
+                <div class="centered row">
+                    <img src="images/assets/some_clouds.png" class="circle spaced">
+                    <p>some clouds</p>
+                    <div class="row-under">
+                        <p class="high xspaced"><span id="degree">34</span>°</p>
+                        <p class="low xspaced"><span id="degree">20</span>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col spaced section">
+                <h4 class="section-title">Friday</h4>
+                <div class="centered row">
+                    <img src="images/assets/some_sun.png" class="circle spaced">
+                    <p>some sun</p>
+                    <div class="row-under">
+                        <p class="high xspaced"><span id="degree">45</span>°</p>
+                        <p class="low xspaced"><span id="degree">30</span>°</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-under centered" id="cookie">
+            <img src="images/assets/cookie.png">
+            <div class="col-3">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features
+                    and to analyse our traffic. <a href="#">Read more</a></p>
+            </div>
+            <button class="btn col" onclick="deleteCookie()">I accept</button>
+        </div>
+    </div>
+</body>
+
+</html>
