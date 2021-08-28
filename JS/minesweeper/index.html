@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="extraStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="col-4">Mine Sweeper</h2>
+            <select id="difficulty" class="col" onchange="difficultySwap(this)">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button onclick="cursorFlag(this)" class="col"><img src="imgs/mineflag.png" alt="mineflag" class="flag" ></button>
+            <button onclick="checkEnd()">Check</button>
+        </div>
+        <div id="the-dojo" class="easy">still loading... there may be an error</div>
+    </div>
+    
+    
+
+    
+</body>
+<script src="minescript.js"></script>
+
+</html>
