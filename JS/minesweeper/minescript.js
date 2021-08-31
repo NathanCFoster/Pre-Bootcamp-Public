@@ -168,4 +168,3 @@ console.log("%c" + "GOOD LUCK THIS IS A CHALLENGE!", style);
 console.table(theDojo);
 // adds the rows of buttons into <div id="the-dojo"></div> 
 dojoDiv.innerHTML = render(theDojo);
-
